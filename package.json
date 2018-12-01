@@ -1,0 +1,24 @@
+{
+  "name": "restapi-boilerplate",
+  "version": "1.0.0",
+  "description": "RESTAPI - BoilerPlate (Node.JS / Mongo / Express)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgealexandruiancu/restapi-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgealexandruiancu/restapi-boilerplate/issues"
+  },
+  "homepage": "https://github.com/georgealexandruiancu/restapi-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.7"
+  }
+}
