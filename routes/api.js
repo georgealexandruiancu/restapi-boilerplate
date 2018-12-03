@@ -56,8 +56,19 @@ router.post('/users', upload.single('avatar'), (req, res, next) => {
 });
 
 // update a user in db
-router.put('/users/:id', function (req, res, next) {
-    User.findOneAndUpdate({ _id: req.params.id }, req.body)
+router.put('/users/:id', upload.single('avatar'), function (req, res, next) {
+    var updateUser = new User({
+        name: req.body.name,
+        rank: req.body.rank,
+        available: req.body.available,
+        avatar: req.file.path
+    })
+    User.findOneAndUpdate({ _id: req.params.id }, {
+        name: req.body.name,
+        rank: req.body.rank,
+        available: req.body.available,
+        avatar: req.file.path
+    })
     .then(() => {
         User.findOne({_id: req.params.id}).then((user)=>{
             res.send(user);
