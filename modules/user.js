@@ -15,8 +15,10 @@ const UserSchema = new Schema({
     available:{
         type: Boolean,
         required: [true, 'Available field is req']
-    }
-    // add in geo location 
+    },
+    avatar: {
+        type: String,
+    } 
 });
 const User = mongoose.model('user', UserSchema);
 

@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/userData');
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //init routes
 app.use("/api", routes);
